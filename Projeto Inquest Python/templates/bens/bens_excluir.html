@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Desafio Inquest{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#a02c89; border-top-width: 2px"></div>
+<div class="container" style="color: #514e53">
+  <div class="py-5 text-center">
+    <h2>Cadastro de Bens</h2>
+    <p class="lead">Por favor, entre com os dados do bem.</p>
+  </div>
+  <div class="row">
+    <div class="col-md-12 order-md-1 ">
+      <h4  class="mb-3">Dados do bem</h4>          
+      <form action="#" method="POST">
+        {% for row in rows %}
+          <div class="row">
+            <div class="col mb-3">
+              <label for="id">Codigo do bem</label>
+              <input type="text" class="form-control" name='bens_id' placeholder="" value="{{ row['bens_id'] }}" disabled>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="descricao">Descrição</label>
+              <input type="text" class="form-control" name="bens_descricao" placeholder="Descrição" value="{{ row['bens_descricao'] }}" disabled>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="situacao">Situação</label>
+              <input type="text" class="form-control" name="bens_situacao" placeholder="Situação" value="{{ row['bens_situacao'] }}" disabled>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" value="submit">Excluir</button>
+        {%  endfor %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

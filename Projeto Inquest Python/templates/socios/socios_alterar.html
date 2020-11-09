@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Desafio Inquest{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#a02c89; border-top-width: 2px"></div>
+<div class="container" style="color: #514e53">
+  <div class="py-5 text-center">
+    <h2>Cadastro de Sociedade</h2>
+    <p class="lead">Por favor, faça a associação entre Empresa x Pessoa.</p>
+  </div>
+  <div class="row">
+    <div class="col-md-12 order-md-1 ">
+      <h4  class="mb-3">Dados da sociedade</h4>          
+      <form action="#" method="POST">
+        {% for row in rows %}
+          <div class="row">
+            <div class="col mb-3">
+              <label for="socios">Codigo da Sociedade</label>
+              <input type="text" class="form-control" name='socios_id' placeholder="" value="{{ row['socios_id'] }}" disabled>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="empresa">Empresa</label>
+              <select class="custom-select d-block w-100" name="socios_empresas_id">
+                <option value="{{ row['socios_empresas_id'] }}">{{ row['empresas_razao'] }}</option>
+                {% for empresa in empresas %}
+                  <option value="{{ empresa['empresas_id'] }}">{{ empresa['empresas_id'] }} - {{ empresa['empresas_razao'] }} - {{ empresa['empresas_cnpj'] }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="pessoa">Pessoa</label>
+              <select class="custom-select d-block w-100" name="socios_pessoas_id">
+                <option value="{{ row['socios_pessoas_id'] }}">{{ row['pessoas_nome'] }} {{ row['pessoas_sobrenome'] }}</option> 
+                {% for pessoa in pessoas %}
+                  <option value="{{ pessoa['pessoas_id'] }}">{{ pessoa['pessoas_id'] }} - {{ pessoa['pessoas_nome'] }} {{ pessoa['pessoas_sobrenome'] }} - {{ pessoa['pessoas_cpf'] }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" value="submit">Alterar</button>
+        {%  endfor %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

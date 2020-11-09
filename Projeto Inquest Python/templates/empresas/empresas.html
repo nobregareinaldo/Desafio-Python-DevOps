@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Desafio Inquest{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#a02c89; border-top-width: 2px"></div>
+<div style="color: #4a4a4a; margin: 35px; line-height: 1.5; text-align:center">
+    <h2>Lista de empresas:</h2>
+</div>
+<div class="table-responsive-lg">
+  <table class="table table-bordered table-hover table-sm">
+    <caption>Lista de empresas</caption>
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Codigo</th>
+        <th scope="col">Razao social</th>
+        <th scope="col">Nome fantasia</th>
+        <th scope="col">CNPJ</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Endereço comercial</th>
+        <th scope="col">Endereço de cobrança</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Celular</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+      <tr>
+        <td>{{ row['empresas_id'] }}</td>
+        <td>{{ row['empresas_razao'] }}</td>
+        <td>{{ row['empresas_fantasia'] }}</td>
+        <td>{{ row['empresas_cnpj'] }}</td>
+        <td>{{ row['empresas_email'] }}</td>
+        <td>{{ row['empresas_end_com'] }}</td>
+        <td>{{ row['empresas_end_cobr'] }}</td>
+        <td>{{ row['empresas_cidade'] }}</td>
+        <td>{{ row['empresas_estado'] }}</td>
+        <td>{{ row['empresas_pais'] }}</td>
+        <td>{{ row['empresas_telefone'] }}</td>
+        <td>{{ row['empresas_celular'] }}</td>
+      </tr>
+        {%  endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

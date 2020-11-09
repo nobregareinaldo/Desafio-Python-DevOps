@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Desafio Inquest{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#a02c89; border-top-width: 2px"></div>
+<div style="color: #4a4a4a; margin: 45px; line-height: 1.5; text-align:center">
+<div class="container" style="color: #514e53">
+  <div class="text-center">
+    <h2>Consulta de patrimônios</h2>
+    <p class="lead">Por favor, entre com o codigo da patrimônio.</p>
+    <br>
+  </div>
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+      <form action="#" method="POST">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-9 text-center align-self-center">
+            <input type="number" class="form-control" name="patr_id" placeholder="Codigo do patrimônio" value="" required>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit" value="submit">Consultar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
