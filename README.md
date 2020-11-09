@@ -1,2 +1,24 @@
 # Desafio-Python-DevOps
 Desafio Python - Reinaldo Nobrega
+
+Este desafio é parte de um processo seletivo que estou participando.
+
+Disponibilizei o arquivo "requirements.txt" com os módulos Python necessários para a instalação desse Projeto.
+
+Python: Python 3.7.3
+Módulos Python: flask==1.1.2 flask-mysql=1.5.1 flask-cors=3.0.9
+Gerenciador de Banco de Dados: MySQL MySQL Workbench 8.0
+
+A pasta "templates", deverá ser mantida como subdiretorio do Projeto, caso contrário não será possível navegar através das páginas HTML.
+Utilizei o framework Bootstrap==4.3.1.
+O servidor será executado em: http://127.0.0.1:5000/
+
+Anexei as evidências de testes na pasta "Testes".
+
+Espero que tenha gostado
+
+Obrigado,
+Reinaldo
+Contato: 11 99562-8125
+e-mail: reinaldo_04@hotmail.com
+LinkedIn: https://www.linkedin.com/in/reinaldo-nobrega-265b7898/
