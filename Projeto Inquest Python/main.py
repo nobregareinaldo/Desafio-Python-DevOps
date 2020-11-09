@@ -1118,4 +1118,4 @@ def not_found(error=None):
     return render_template("nao_econtrada.html", pagina=request.url)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
